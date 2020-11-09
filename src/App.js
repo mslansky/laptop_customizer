@@ -42,7 +42,7 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <Main features={this.props.features} selected={this.state.selected} updateFeature={this.updateFeature} />
+          <Main selected={this.state.selected} updateFeature={this.updateFeature} />
           <Checkout selected={this.state.selected} />
         </main>
       </div >
