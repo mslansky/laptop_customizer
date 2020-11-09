@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Features from './Features.js';
-import Summary from './Summary.js';
-import Total from './Total.js'
-
-
-// const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-//   style: 'currency',
-//   currency: 'USD'
-// });
+import Main from './Main.js'
+import Checkout from './Checkout.js';
 
 class App extends Component {
   state = {
@@ -49,19 +42,10 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <form className="main__form">
-            <h2>Customize your laptop</h2>
-            <Features features={this.props.features} selected={this.state.selected} updateFeature={this.updateFeature} />
-          </form>
-          <section className="main__summary">
-            <h2>Your cart</h2>
-            <Summary selected={this.state.selected} />
-
-            <Total selected={this.state.selected} />
-
-          </section>
+          <Main features={this.props.features} selected={this.state.selected} updateFeature={this.updateFeature} />
+          <Checkout selected={this.state.selected} />
         </main>
-      </div>
+      </div >
     );
   }
 }

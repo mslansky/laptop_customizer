@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import slugify from 'slugify';
-
+import Selectors from './Selectors.js'
 
 class Features extends Component {
   render() {
@@ -48,19 +48,6 @@ class Label extends Component {
 }
 
 
-
-
-class Selectors extends Component {
-  render() {
-    return (
-      <fieldset className="feature" key={this.props.featureHash}>
-        <legend className="feature__name">
-          <h3>{this.props.feature}</h3>
-        </legend>
-        {this.props.options}
-      </fieldset>);
-  }
-}
 
 
 
