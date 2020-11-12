@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class Summary extends Component {
   render() {
     const USCurrencyFormat = new Intl.NumberFormat('en-US', {
